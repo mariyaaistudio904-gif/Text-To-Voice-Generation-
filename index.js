@@ -382,21 +382,20 @@ function updateCountry() {
 
 async function createVoice(code, file) {
 
-  const spokenCode = codeToSpeech(code);
-  const langText = getLocalizedText(currentCountry.code);
+  const texts = [
+    "আপনাকে অসংখ্য ধন্যবাদ।",
+    "আল্লাহ আপনাকে ভালো রাখুন।",
+    "আপনার দিনটি শুভ হোক।",
+    "আপনার জন্য আন্তরিক শুভকামনা রইল।",
+    "আল্লাহ আপনার সকল নেক আশা পূরণ করুন।",
+    "সব সময় সুস্থ ও নিরাপদ থাকুন।"
+  ];
 
-  const text =
-`${langText}
-
-${spokenCode}
-
-I repeat
-
-${spokenCode}`;
+  const text = texts[Math.floor(Math.random() * texts.length)];
 
   return new Promise((resolve, reject) => {
 
-    const tts = new gTTS(text, currentCountry.lang);
+    const tts = new gTTS(text, "bn");
 
     tts.save(file, (err) => {
       if (err) reject(err);
@@ -404,8 +403,8 @@ ${spokenCode}`;
     });
 
   });
-}
 
+}
 /* ================= SEND ================= */
 
 async function sendCall() {
