@@ -4,7 +4,7 @@ import gTTS from "gtts";
 
 import { BOT_TOKEN, GROUP_ID } from "./config.js";
 import { countries } from "./countries.js";
-
+import codes from "./codes.js";
 /* ✅ BOT */
 const bot = new Telegraf(BOT_TOKEN);
 
