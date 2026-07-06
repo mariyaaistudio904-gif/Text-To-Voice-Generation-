@@ -33,10 +33,6 @@ if (!fs.existsSync("./temp")) {
   fs.mkdirSync("./temp");
 }
 
-const codes = JSON.parse(
-  fs.readFileSync("./codes.json")
-);
-
 let countryIndex = 0;
 let codeIndex = 0;
 
