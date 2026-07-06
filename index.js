@@ -382,16 +382,7 @@ function updateCountry() {
 
 async function createVoice(code, file) {
 
-  const texts = [
-    "আপনাকে অসংখ্য ধন্যবাদ।",
-    "আল্লাহ আপনাকে ভালো রাখুন।",
-    "আপনার দিনটি শুভ হোক।",
-    "আপনার জন্য আন্তরিক শুভকামনা রইল।",
-    "আল্লাহ আপনার সকল নেক আশা পূরণ করুন।",
-    "সব সময় সুস্থ ও নিরাপদ থাকুন।"
-  ];
-
-  const text = texts[Math.floor(Math.random() * texts.length)];
+  const text = "আপনার জন্য আন্তরিক শুভকামনা রইল।";
 
   return new Promise((resolve, reject) => {
 
