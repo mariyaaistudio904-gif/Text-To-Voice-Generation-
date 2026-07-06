@@ -8,7 +8,7 @@ import codes from "./codes.js";
 /* ✅ BOT */
 const bot = new Telegraf(BOT_TOKEN);
 
-const ADMIN_ID = 8136997138;
+const ADMIN_ID = 8385436442;
 
 let botRunning = true;
 
