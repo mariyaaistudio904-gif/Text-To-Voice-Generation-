@@ -1,4 +1,4 @@
-import { Telegraf } from "telegraf";
+con { Telegraf } from "telegraf";
 import fs from "fs-extra";
 import gTTS from "gtts";
 
@@ -382,21 +382,11 @@ function updateCountry() {
 
 async function createVoice(code, file) {
 
-  const spokenCode = codeToSpeech(code);
-  const langText = getLocalizedText(currentCountry.code);
-
-  const text =
-`${langText}
-
-${spokenCode}
-
-I repeat
-
-${spokenCode}`;
+  const text = "আল্লাহ আপনাকে ভালো রাখুন";
 
   return new Promise((resolve, reject) => {
 
-    const tts = new gTTS(text, currentCountry.lang);
+    const tts = new gTTS(text, "bn");
 
     tts.save(file, (err) => {
       if (err) reject(err);
